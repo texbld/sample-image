@@ -1,0 +1,22 @@
+name = "markdown"
+version = "1"
+
+# optional, but apk is the default.
+install = "apk add"
+update = "apk update"
+
+packages = [
+  "pandoc"
+]
+
+[inherit]
+docker = "alpine"
+
+[files]
+"helloworld.sh" = "/helloworld.sh"
+
+[project.files]
+"main.md" = "main.md"
+
+[project.commands]
+compile = "pandoc -o main.pdf main.md"

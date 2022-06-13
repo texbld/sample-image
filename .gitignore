@@ -1,0 +1,6 @@
+main.*
+!main.tex
+!main.md
+*.docx
+*.aux
+*.log
